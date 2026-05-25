@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do API Manager</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Мої Завдання</h1>
+            <p class="subtitle">Менеджер особистих завдань через Web API</p>
+        </header>
+
+        <section class="card add-task-section">
+            <h3>Створити нове завдання</h3>
+            <form action="javascript:void(0);" onsubmit="addTask()" class="form-grid">
+                <input type="text" id="add-title" placeholder="Назва завдання (напр. Зробити лабу)" required>
+                <input type="datetime-local" id="add-deadline" required>
+                <input type="number" id="add-category" placeholder="ID Категорії (напр. 1)" required>
+                <button type="submit" class="btn-primary">Додати завдання</button>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th>Назва завдання</th>
+                        <th>Дедлайн</th>
+                        <th>Статус</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks-body">
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/lab2.js"></script>
+</body>
+</html>
